@@ -7,3 +7,6 @@ class Pratos(ItemCardapio):
         
     def __str__(self):
         return self._nome
+
+    def aplicar_descontos(self):
+        self._preco -= (self._preco * 0.05)
