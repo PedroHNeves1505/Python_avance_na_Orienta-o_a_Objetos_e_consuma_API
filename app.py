@@ -1,27 +1,18 @@
 from models.restaurante import Restaurante
 from models.avaliacao import Avaliacao
+from models.cardapio.bebidas import Bebidas
+from models.cardapio.pratos import Pratos
 
 restaurante_penacony = Restaurante('Dreams Flavor', 'Sobremesas')
 restaurante_amphoreus = Restaurante('Infinity Cycles', 'Rodízio')
 restaurante_planacardia = Restaurante('Visionary Drinks', 'Bebidas alcólicas')
+bebida_melancia = Bebidas('Suco de Melancia', 10.00, 'Grande')
+prato_misto_quente = Pratos('Misto Quente', 9.00, 'Pão quentinho e tostado na manteiga por fora, recheado com queijo derretendo e presunto suculento por dentro. A combinação perfeita de crocância e sabor para qualquer hora do dia!')
 
-Restaurante.alternar_estado(restaurante_amphoreus)
-Restaurante.alternar_estado(restaurante_penacony)
-
-restaurante_amphoreus.receber_avaliacao('Phainon', 4.3)
-restaurante_amphoreus.receber_avaliacao('Mydei', 3.7)
-restaurante_amphoreus.receber_avaliacao('Cyrene', 5.0)
-restaurante_amphoreus.receber_avaliacao('Dan Heng', 2.0)
-restaurante_amphoreus.receber_avaliacao('March 7th', 5.0)
-restaurante_amphoreus.receber_avaliacao('Hysilens', 3.8)
-restaurante_amphoreus.receber_avaliacao('Hyancine', 4.7)
-restaurante_amphoreus.receber_avaliacao('Castorice', 4.8)
-restaurante_amphoreus.receber_avaliacao('Tribbie', 1.5)
-restaurante_amphoreus.receber_avaliacao('Aglea', 0.7)
-restaurante_amphoreus.receber_avaliacao('Cifer', 8.0)
 
 def main():
-	Restaurante.listar_restaurantes()
+	print(bebida_melancia)
+	print(prato_misto_quente)
 
 
 
