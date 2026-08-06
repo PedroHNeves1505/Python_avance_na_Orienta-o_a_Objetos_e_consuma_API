@@ -26,7 +26,5 @@ os.makedirs(nome_da_pasta, exist_ok=True)
 caminho_arquivo = os.path.join(nome_da_pasta, f'{nome_do_restaurante}.json')
 
 for nome_do_restaurante, dados in dados_restaurante.items():
-    nome_do_arquivo = f'{nome_do_restaurante}.json'
-    caminho_completo = os.path.join(nome_da_pasta, nome_do_arquivo)
-    with open(caminho_completo,'w') as arquivo_restaurante:
+    with open(caminho_arquivo,'w') as arquivo_restaurante:
         json.dump(dados,arquivo_restaurante,indent=4)
